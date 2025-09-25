@@ -1,0 +1,95 @@
+:root {
+  --bg-main: #f8f9fa;
+  --card-bg: #ffffff;
+  --text-main: #2c3e50;
+  --text-muted: #6c757d;
+  --accent: #5e60ce;
+  --accent-light: rgba(94, 96, 206, 0.1);
+  --navbar-bg: rgba(255, 255, 255, 0.95);
+  --sidebar-bg: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --gradient-primary: linear-gradient(135deg, #5e60ce, #7c3aed);
+  --gradient-bg: linear-gradient(135deg, rgba(94, 96, 206, 0.05), rgba(124, 58, 237, 0.05));
+}
+
+[data-theme="dark"] {
+  --bg-main: #1e1e2f;
+  --card-bg: #2a2b3d;
+  --text-main: #ecf0f1;
+  --text-muted: #b0b0b0;
+  --accent: #5e60ce;
+  --accent-light: rgba(94, 96, 206, 0.15);
+  --navbar-bg: rgba(42, 43, 61, 0.95);
+  --sidebar-bg: #2a2b3d;
+  --shadow: rgba(0, 0, 0, 0.3);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --gradient-primary: linear-gradient(135deg, #5e60ce, #7c3aed);
+  --gradient-bg: linear-gradient(135deg, rgba(94, 96, 206, 0.1), rgba(124, 58, 237, 0.1));
+}
+
+[data-theme="dark"] .card,
+[data-theme="light"] .card {
+  background-color: var(--card-bg) !important;
+  color: var(--text-main) !important;
+}
+
+body[data-bs-theme="dark"] {
+  --bs-body-bg: #1e1e2f;
+  --bs-body-color: #ffffff;
+  --bs-table-bg: #2a2a40;
+  --bs-table-border-color: #444;
+  --bs-table-striped-bg: #2e2e4d;
+  --bs-table-hover-bg: #3a3a5a;
+}
+
+/* Animations globales */
+@keyframes slideInFromLeft {
+  0% { transform: translateX(-100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Smooth transitions pour tous les éléments interactifs */
+* {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Améliorations des scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4c4fd4;
+}
+
+/* Focus states améliorés */
+button:focus,
+.btn:focus,
+.nav-link:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(94, 96, 206, 0.2);
+}
