@@ -73,7 +73,7 @@ export default function Help() {
     "Matiere": { label: "Matiere", color: "secondary", icon: "x-circle" },
     "Documents": { label: "Documents", color: "secondary", icon: "x-circle" },
     "Evaluation": { label: "Evaluation", color: "secondary", icon: "x-circle" },
-    "Authentification": { label: "Authentification", color: "secondary", icon: "x-circle" }
+    "Auth": { label: "Authentification", color: "secondary", icon: "x-circle" }
   };
 
   // Détecte thème au chargement et sur changement DOM
