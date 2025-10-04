@@ -2,8 +2,8 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: "http://woopservice.infinityfreeapp.com/api",
-  withCredentials: false, // false car tu utilises des tokens Bearer, pas les cookies Sanctum
+  baseURL: "https://woopservice.infinityfreeapp.com/api",
+  withCredentials: true, // false car tu utilises des tokens Bearer, pas les cookies Sanctum
   headers: {
     Accept: "application/json",
   },
