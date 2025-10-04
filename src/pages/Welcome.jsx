@@ -584,6 +584,77 @@ const WoopServiceLanding = () => {
     );
   };
 
+  // Testimonials Section
+  const TestimonialsSection = () => {
+    const testimonials = [
+      {
+        quote: "Interface très intuitive ! J'ai pu accéder à mes cours en moins de 5 minutes. La qualité des vidéos est exceptionnelle.",
+        author: "Marie Dupont",
+        role: "Étudiante en Terminale",
+        rating: 5,
+        avatar: User1
+      },
+      {
+        quote: "Les cours en ligne m'ont permis de rattraper mon retard en mathématiques. Les professeurs sont très pédagogues !",
+        author: "Jean-Claude Mballa",
+        role: "Étudiant universitaire",
+        rating: 5,
+        avatar: User2
+      },
+      {
+        quote: "Excellente plateforme qui nous permet de mieux organiser nos cours et d'offrir un enseignement de qualité à nos étudiants.",
+        author: "Dr. Sophie Ngako",
+        role: "Enseignante partenaire",
+        rating: 5,
+        avatar: User3
+      }
+    ];
+
+    return (
+      <section id="testimonials" className="py-5 bg-light">
+        <Container className="py-5">
+          <div className="text-center mb-5">
+            <Badge bg="warning" className="mb-3 px-3 py-2 fs-6">Témoignages</Badge>
+            <h2 className="display-5 fw-bold mb-3">Ils nous font confiance</h2>
+            <p className="lead text-muted col-lg-8 mx-auto">
+              Découvrez l'expérience de nos étudiants et partenaires qui utilisent Woop Service au quotidien
+            </p>
+          </div>
+          <Row className="g-4">
+            {testimonials.map((testimonial, index) => (
+              <Col key={index} lg={4} md={6}>
+                <Card className="h-100 border-0 shadow-sm p-4" style={{ borderRadius: '20px' }}>
+                  <Card.Body>
+                    <div className="d-flex mb-3">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <FaStar key={i} className="text-warning me-1" size={16} />
+                      ))}
+                    </div>
+                    <blockquote className="blockquote mb-4">
+                      <p className="text-muted fst-italic">"{testimonial.quote}"</p>
+                    </blockquote>
+                    <div className="d-flex align-items-center">
+                      <img 
+                        src={testimonial.avatar} 
+                        alt={testimonial.author}
+                        className="rounded-circle me-3"
+                        style={{ width: '50px', height: '50px', objectFit: 'cover' }}
+                      />
+                      <div>
+                        <div className="fw-bold">{testimonial.author}</div>
+                        <small className="text-primary">{testimonial.role}</small>
+                      </div>
+                    </div>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </section>
+    );
+  };
+
   // CTA Section
   const CTASection = () => (
     <section id="cta" className="py-5" style={{
