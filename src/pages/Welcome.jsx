@@ -1033,7 +1033,7 @@ const WoopServiceLanding = () => {
       <ServicesSection />
       <InstitutionsSection />
       <SubjectsSection />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       <CTASection />
       <ContactSection />
       <FooterSection />
